@@ -1,0 +1,139 @@
+table{
+   
+    table-layout: fixed;
+    
+    border-radius: 2vw ;
+    color: #a3d2ca;
+    
+    padding : 0.05vw;
+    margin-left: 1vw;
+    word-wrap: break-word;
+    text-align: left;
+    
+    margin-top: 1.5vh;
+    border-spacing: 0;
+    overflow-y: scroll;
+    box-shadow: 0 0 20px rgba(188, 229, 236, 0.15);
+    
+}
+
+th{
+    color : orange;
+    word-wrap: normal;
+    padding: 1vw;
+    margin-left: 1vw;
+    word-wrap: break-word;
+    text-align: center;
+    border-spacing: 0;
+    height: 5vh;
+    font-size: 80%;
+    border-radius: 0.5vw ;
+    
+}
+
+.rowStyle{
+    height:5vh;
+    border-spacing: 0;
+    color :#a3d8f4;
+    border: 0.04vw solid orange;
+    margin-left: 1vw;
+    word-wrap: break-word;
+    text-align: center;
+  
+    font-size: 75%;
+   
+  
+}
+
+
+
+.btn {
+    background-image: url('../downloadButtonimg.PNG');
+    color: orange;
+    margin-left: 1.5vw;
+    
+    height: 5vh;
+    width:3.0vw;
+    border: 0.1vw solid rgb(2, 10, 121);
+    border-radius: 0.5vw;
+    margin-top: 1vh;
+    transition-duration: 0.8s;
+    background-size: 3.0vw 4.7vh;
+    background-repeat: no-repeat;
+   
+}
+
+
+.Refreshbtn {
+    background-image: url('../Refresh.PNG');
+    color: orange;
+    margin-left: 1.5vw;
+    
+    height: 5vh;
+    width:2.9vw;
+    border: 0.1vw solid orange;
+    border-radius: 0.5vw;
+    margin-top: 1vh;
+    transition-duration: 0.8s;
+    background-size: 2.8vw 4.7vh;
+    background-repeat: no-repeat;
+   
+}
+
+
+.rowStyle:hover{
+    
+    color :rgb(236, 163, 129);
+    font-weight:bold;
+    background-color: #023e8a;
+    
+}
+
+.rowStyle:nth-of-type(even){
+    background-color: #182547;
+    
+}
+
+.rowStyle:nth-of-type(even):hover{
+    background-color: #023e8a;
+}
+.buttonStyle{
+  margin-top: 1vh;
+  margin-left: 1.5vw;
+  border-radius: 0.5vw;
+  width : 6vw;
+  height: 5vh;
+  color :#a3d8f4;
+  border: 0.04vw solid orange;
+  text-align: center;
+  font-weight: bolder;
+  font-family: sans-serif;
+  background-color: #182547;
+  box-shadow: rgb(179, 219, 233);
+  transition-duration: 0.8s;
+  position: relative;
+}
+
+.buttonStyle:hover{
+    background-color: rgb(11, 11, 37);
+    color: #f0894d;
+    font-weight: bold;
+}
+
+.searchTextField{
+    background-color: #182547;
+    border: 0.04vw solid orange;
+    margin-top: 1vh;
+    margin-left: 22vw;
+    border-radius: 0.5vw;
+    width : 20vw;
+    height: 5vh;
+    background-image: url("../searchOrangeIconResized.jpg");
+    background-repeat: no-repeat;
+    background-size: 2.8vw;
+    background-position-x: right;
+    padding-left: 0.5vw;
+    color:orange;
+}
+
+

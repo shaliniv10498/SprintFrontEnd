@@ -1,0 +1,18 @@
+.Loader{
+    border-radius: 50%;
+    width : 2vw;
+    height: 4vh;
+    border: .5vw solid #080b31;
+    border-top: 0.5vw solid orange;
+    animation: spin 2s linear infinite;
+    position: relative;
+    margin-top: 20vh;
+    left: 800%;
+  
+    z-index: 1;
+}
+
+@keyframes spin{
+    0% { transform: rotate(0deg); }
+   100% { transform: rotate(360deg); }
+}

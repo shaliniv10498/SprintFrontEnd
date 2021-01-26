@@ -1,0 +1,36 @@
+#msgCmp{
+    visibility: hidden;
+    display: inline;
+    position: fixed;
+    background-color: rgba(20, 20, 37, 0.7);
+    color :rgb(135, 255, 75);
+    font-size: 90%;
+    font-weight: bold;
+    font-family: sans-serif;
+    border-radius: 1vw;
+    border-color: rgba(118, 243, 60);
+    z-index: 1;
+    margin-left: 35vw;
+    top:2vh;
+    min-height: 5vh;
+    min-width: 10vw;
+    padding: 2vh;
+    text-align: center;
+    
+}
+
+#msgCmp.messageComponent{
+    visibility: visible;
+    animation-timing-function: ease;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@keyframes fadein {
+    from {top: 0; opacity: 0;}
+    to {top: 2vh; opacity: 1;}
+  }
+
+  @keyframes fadeout {
+    from {top: 2vh; opacity: 1;}
+    to {top: 0; opacity: 0;}
+  }

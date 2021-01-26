@@ -36,3 +36,30 @@
     transform: rotate(360deg);
   }
 }
+
+.AppBar{
+  background-color: #16213e;
+  color: white;
+  border: 0.10vw solid orange;
+  border-radius: 0.25vw;
+  
+}
+.ImageLogo{
+  animation-duration: 4s;
+  animation-delay: 2s;
+  animation-name: Applogo;
+  margin-top: .5vh;
+  margin-left: .5vw;
+  border-radius: 0.5vh;
+  animation-direction: reverse;
+  animation: Applogo 5s infinite;
+  animation-timing-function: linear;
+}
+@keyframes Applogo{
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}

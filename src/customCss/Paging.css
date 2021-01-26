@@ -1,0 +1,67 @@
+.pagingButton{
+  margin-top: 1vh;
+  margin-left: 1.5vw;
+  border-radius: 50%;
+  width : 3vw;
+  height: 4vh;
+  color :#a3d8f4;
+  border: 0.1vw solid rgb(34, 26, 145);
+  text-align: center;
+  font-weight: bolder;
+  font-size: 3vh;
+  font-family: sans-serif;
+  background-color: #182547;
+  box-shadow: rgb(179, 219, 233);
+  transition-duration: 0.5s;
+  position: relative;
+}
+
+.nextPrevButton{
+  margin-top: 1vh;
+  margin-left: 1.5vw;
+  border-radius: 50%;
+  width : 3vw;
+  height: 4vh;
+  color :#a3d8f4;
+  border: 0.1vw solid rgb(34, 26, 145);
+  text-align: center;
+  font-weight: bolder;
+  font-size: 3vh;
+  font-family: sans-serif;
+  background-color: #182547;
+  box-shadow: rgb(179, 219, 233);
+  transition-duration: 0.5s;
+  position: relative;
+}
+
+.nextPrevButton:enabled:hover{
+    background-color: rgb(11, 11, 37);
+    color: #f0894d;
+    font-weight: bold;
+}
+
+.nextPrevButton:disabled{
+    background-color: #182547;
+    color :#a3d8f4;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.pageNumberTextField{
+    border:  0.1vw solid rgb(34, 26, 145);;
+    margin-top: 1vh;
+    margin-left: 1.5vw;
+    border-radius: 0.5vw;
+    width : 3vw;
+    height: 3vh;
+    background-color: #182547;
+    text-align: center;
+    color:#a3d8f4;
+}
+
+.pagingButton:hover{
+    background-color: rgb(11, 11, 37);
+    color: #f0894d;
+    font-weight: bold;
+
+}

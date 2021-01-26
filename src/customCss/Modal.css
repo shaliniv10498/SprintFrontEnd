@@ -1,0 +1,110 @@
+.modal{
+    display: inline;
+    position: fixed;
+    z-index: 1;
+    overflow: auto;
+    width: 50vw;
+    height: 50vh;
+    margin-top: 15vh;
+    margin-left: 15vw;
+    background-color: rgba(0,0,0);
+    background-color: rgba(0,0,0,0.8);
+    border-radius: 5%;
+    animation-name: animatetop;
+    animation-duration: 0.4s ; 
+    box-shadow: 0 2vh 2vh 0 rgba(184, 146, 146, 0.2),0 2vh 2vh 0 rgba(147, 198, 211, 0.19);
+}
+
+@keyframes animatetop {
+    from {top:-20vh; opacity:0}
+    to {top:0; opacity:1}
+  }
+
+  .close {
+    color: white;
+    margin-left: 33vw;
+    display: inline;
+    font-size: 5vh;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: orange;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  
+
+  .modalContent{
+    margin-top: 0.5vh;
+    margin-left: 2vw;
+  }
+
+
+ .modalBody{
+    margin-left: 1vw;
+    margin-top: 2vh;
+    width:44vw;
+    height: 38vh;
+    background-color: rgb(3, 4, 44);
+    
+ }
+.modalHeader{
+    color : orange;
+    font-size : 140%;
+    display:inline;
+    background-color: rgb(5, 44, 75);
+    padding: 0.1vw 0.1vh 0.1vw 0.1vh;
+   
+}
+.Items{
+  display: inline-block;
+  padding-top: 1vh;
+  padding-right: 1vw;
+  padding-left: 1vw;;
+  
+}
+.modalLabel{
+    width:20vw;
+    color:paleturquoise;
+    float: left;
+}
+  
+.inputFieldsCss{
+    border-radius: 0.5vh;
+    color : orange;
+    background-color: #182547;
+    border: 0.04vw solid orange;
+    height: 4vh;
+    width: 15vw;
+}
+
+h5{
+    display: inline;
+    float: center;
+}
+
+
+.buttonStyle{
+    margin-top: 1vh;
+    margin-left: 1.5vw;
+    border-radius: 0.5vw;
+    width : 6vw;
+    height: 5vh;
+    color :#a3d8f4;
+    border: 0.04vw solid orange;
+    text-align: center;
+    font-weight: bolder;
+    font-family: sans-serif;
+    background-color: #182547;
+    box-shadow: rgb(179, 219, 233);
+    transition-duration: 0.8s;
+    position: relative;
+  }
+
+  
+
+
+  
