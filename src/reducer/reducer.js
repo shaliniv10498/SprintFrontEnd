@@ -6,8 +6,7 @@ const initialState = {
     totalSprintGridRecords : null,
     pageSize:10,
     loaderState : false,
-    sprintTrackerState : true,
-    sprintProgressState : false,
+   
     
 }
 
@@ -28,14 +27,7 @@ function sprintTrackerGridReducer(state = initialState,action){
                                         ...state,
                                         loaderState : action.payload
                                       }
-  case constants.SPRINT_TRACKER_STATE : return{
-                                            ...state,
-                                            sprintTrackerState:action.payload
-                                             }
-  case constants.SPRINT_PROGRESS_STATE : return{
-                                              ...state,
-                                              sprintProgressState:action.payload
-                                              }
+                                      break;
     default : return initialState
    }
 

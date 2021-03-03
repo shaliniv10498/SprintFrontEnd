@@ -12,7 +12,7 @@ class PagingContainer extends Component {
             currentPage : 1,
            
             nextState :false,
-            prevState : false,
+            prevState : true,
         }
 
     }
@@ -24,39 +24,48 @@ class PagingContainer extends Component {
         console.log("pages")
         console.log(this.state.currentPage+1)
         console.log(this.props.numberOfPages)
-        if(this.state.currentPage+1<=this.props.numberOfPages){
+        if(this.state.currentPage+1<this.props.numberOfPages){
         this.setState({
-            currentPage : this.state.currentPage+1
+            currentPage : this.state.currentPage+1,
+            prevState : false,
         }, this.PagingApi)
        }
-       else{
-         this.setState({
-             nextState : !this.state.nextState
-         })
-       }
-        
+       if(this.state.currentPage===this.props.numberOfPages){
+        this.setState({
+            prevState:false,
+            nextState:true
+        })
+    }
+              
     }
 
     lastClick=()=>{
         this.setState({
-            currentPage : this.props.numberOfPages
+            currentPage : this.props.numberOfPages,
+            prevState : false,
+            nextState:true
         }, this.PagingApi)
     }
     prevClick=()=>{
-        if(this.state.currentPage-1>0){
+        if(this.state.currentPage-1>1){
         this.setState({
-            currentPage : this.state.currentPage-1
+            currentPage : this.state.currentPage-1,
+            nextState:false
         }, this.PagingApi)
-     }
-     else{
-         this.setState({
-            prevState : !this.state.prevState
-         })
-     }
+       }
+       if(this.state.currentPage===1){
+           this.setState({
+               prevState:true,
+               nextState:false
+           })
+       }
+    
     }
     firstClick=()=>{
         this.setState({
-            currentPage : 1
+            currentPage : 1,
+            nextState:false,
+            prevState:true
         }, this.PagingApi)
     }
     PagingApi=()=>{

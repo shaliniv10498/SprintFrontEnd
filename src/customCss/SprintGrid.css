@@ -1,7 +1,7 @@
 table{
    
     table-layout: fixed;
-    
+    width:70vw;
     border-radius: 2vw ;
     color: #a3d2ca;
     
@@ -80,7 +80,11 @@ th{
    
 }
 
-
+.rowStyle::selection{
+    background-color: #4889dd;
+    color :rgb(4, 17, 46);
+    font-weight:bold;
+}
 .rowStyle:hover{
     
     color :rgb(236, 163, 129);
@@ -112,6 +116,7 @@ th{
   box-shadow: rgb(179, 219, 233);
   transition-duration: 0.8s;
   position: relative;
+  cursor: pointer;
 }
 
 .buttonStyle:hover{
@@ -135,5 +140,6 @@ th{
     padding-left: 0.5vw;
     color:orange;
 }
+
 
 

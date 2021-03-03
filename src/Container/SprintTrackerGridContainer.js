@@ -4,7 +4,8 @@ import SprintTrackerGridComponent from '../Components/SprintTrackerGridComponent
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import * as Action from '../action/action';
-import CreateModalContainer from './CreateModalContainer'
+import CreateModalContainer from './CreateModalContainer';
+import '../customCss/Tab.css';
 
 class SprintTrackerGridContainer extends Component {
     constructor(props){
@@ -12,7 +13,8 @@ class SprintTrackerGridContainer extends Component {
         this.state={
             isChecked : false,
             sortState : false, //asc
-            createModalState : false
+            createModalState : false,
+            checkBoxStateArray : []
         }
      
        
@@ -21,6 +23,19 @@ class SprintTrackerGridContainer extends Component {
     componentDidMount(){
        this.props.actionDispatch.setLoader(true);
        this.Load()
+       this.setState(state=>{
+        
+        let checkBoxStateArray =[];
+        var  i=0
+        while(i<this.props.totalRecords){
+            checkBoxStateArray = state.checkBoxStateArray.push(false);
+            i++
+        }
+      
+        return{
+            checkBoxStateArray
+        }
+       })
     }
 
     Load=()=>{
@@ -53,17 +68,36 @@ class SprintTrackerGridContainer extends Component {
       this.searchApi(event.target.value);
 
     }
-   checktheCheckBoxOnRowSelection=()=>{
-    
-     this.specificCheckBoxSelection();
+   checktheCheckBoxOnRowSelection=(index)=>{
+     console.log(index);
+     this.specificCheckBoxSelection(index);
    
    }
 
-   specificCheckBoxSelection=()=>{
-    this.setState({
-        isChecked : !this.state.isChecked
-    })
-   }
+   specificCheckBoxSelection=(indexPassed)=>{
+       console.log(indexPassed)
+       let checkBoxStateArray=[];
+
+       this.setState(state=>{
+          checkBoxStateArray= state.checkBoxStateArray.map((value,index)=>{
+             if(indexPassed===index){
+                 return this.setState({isChecked:!this.state.isChecked});
+             }
+             else{
+                return this.setState({isChecked:false});
+            }
+             }
+         )
+            }
+        )
+
+         return{
+             checkBoxStateArray
+         }
+    }
+
+   
+   
     searchApi=(query)=>{
         this.props.actionDispatch.setLoader(true);
         const axios = require('axios');
@@ -181,7 +215,7 @@ class SprintTrackerGridContainer extends Component {
   render(){
      
       return(
-          <div className="parentDiv">
+          <div className="tabcontent">
                {
                   this.state.createModalState===true?<CreateModalContainer totalRecords={this.props.totalRecords} 
                   closeCreateModal={this.closeModal}
@@ -197,7 +231,8 @@ class SprintTrackerGridContainer extends Component {
               toCsv={this.toCsv}
               Load={this.Load}
               changeState={this.changeState}
-              loaderState={this.props.loaderState}/>
+              loaderState={this.props.loaderState}
+              checkBoxStateArray={this.state.checkBoxStateArray}/>
              
               <PaginationToolBar
              numberOfPages = {Math.ceil(this.props.totalRecords/this.props.pageSize)}></PaginationToolBar>

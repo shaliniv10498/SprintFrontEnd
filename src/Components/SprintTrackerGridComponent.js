@@ -14,7 +14,7 @@ function SprintTrackerGridComponent(props)
         <div>
           
          <React.Fragment>
-            {console.log(props.gridData)}
+            
         <div style={{display:"flex"}}>
         <button type="button" className="buttonStyle" onClick={()=>{props.changeState()}}>Create</button>
         <button type="button"   className="buttonStyle">Edit</button>
@@ -44,10 +44,11 @@ function SprintTrackerGridComponent(props)
                 props.loaderState === true ?<LoaderComponent/> : props.gridData.map((value,index)=>{
                     var checBoxId = index+"sprintCheck"
                     
+                    
                     return (
                        
-                        <tr className = "rowStyle" key = {index + "sprintRow"} onClick={props.rowSelection}>
-                            <td ><input type="checkbox" id = {checBoxId} onChange={props.specificCheckBoxSelection} checked={props.isChecked}/></td>
+                        <tr className = "rowStyle" key = {index + "sprintRow"} onClick={(index)=>props.rowSelection(index)}>
+                            <td ><input type="checkbox" id = {checBoxId} checked={props.checkBoxStateArray[index]}/></td>
                             <td id = {index + "sprintdata"}>{value.sprint_id}</td>
                             <td id = {index + "sprintdata"}> {value.sprint_name}</td>
                             <td id = {index + "sprintdata"}> {value.total_items}</td>
@@ -58,6 +59,12 @@ function SprintTrackerGridComponent(props)
                         
                     )
                 })
+               
+                
+            }
+            {
+                console.log(props.checkBoxStateArray)
+
             }
             </tbody>
         

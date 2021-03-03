@@ -16,18 +16,3 @@ export const setLoader = (data) => ({
     payload : data
 })
 
-export const setSprintTrackerState=(data)=>(
-    {
-        type : constants.SPRINT_TRACKER_STATE,
-        payload : data
-    }
-)
-
-
-export const setSprintProgressState=(data)=>(
-    {
-        type : constants.SPRINT_PROGRESS_STATE,
-        payload : data
-    }
-)
-

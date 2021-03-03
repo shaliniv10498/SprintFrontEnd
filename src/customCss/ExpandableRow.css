@@ -1,0 +1,8 @@
+.mainDiv{
+    background-color: midnightblue;
+    color :turquoise;
+    padding: 0 1vw;
+    max-height: 0;
+   
+    transition: max-height 0.2s ease-out;
+} 
