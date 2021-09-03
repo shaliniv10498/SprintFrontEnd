@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/SprintFrontEnd/static/css/main.8968770d.chunk.css",
+    "main.js": "/SprintFrontEnd/static/js/main.6cd0be3a.chunk.js",
+    "main.js.map": "/SprintFrontEnd/static/js/main.6cd0be3a.chunk.js.map",
+    "runtime-main.js": "/SprintFrontEnd/static/js/runtime-main.c3a09835.js",
+    "runtime-main.js.map": "/SprintFrontEnd/static/js/runtime-main.c3a09835.js.map",
+    "static/js/2.d04b174b.chunk.js": "/SprintFrontEnd/static/js/2.d04b174b.chunk.js",
+    "static/js/2.d04b174b.chunk.js.map": "/SprintFrontEnd/static/js/2.d04b174b.chunk.js.map",
+    "static/js/3.0eedb9b3.chunk.js": "/SprintFrontEnd/static/js/3.0eedb9b3.chunk.js",
+    "static/js/3.0eedb9b3.chunk.js.map": "/SprintFrontEnd/static/js/3.0eedb9b3.chunk.js.map",
+    "index.html": "/SprintFrontEnd/index.html",
+    "static/css/main.8968770d.chunk.css.map": "/SprintFrontEnd/static/css/main.8968770d.chunk.css.map",
+    "static/js/2.d04b174b.chunk.js.LICENSE.txt": "/SprintFrontEnd/static/js/2.d04b174b.chunk.js.LICENSE.txt",
+    "static/media/Profile.cde9fd23.svg": "/SprintFrontEnd/static/media/Profile.cde9fd23.svg",
+    "static/media/SprintGrid.css": "/SprintFrontEnd/static/media/downloadButtonimg.d8d8cfbd.PNG"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c3a09835.js",
+    "static/js/2.d04b174b.chunk.js",
+    "static/css/main.8968770d.chunk.css",
+    "static/js/main.6cd0be3a.chunk.js"
+  ]
+}
